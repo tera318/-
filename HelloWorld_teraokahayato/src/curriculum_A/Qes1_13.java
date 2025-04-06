@@ -9,29 +9,29 @@ public class Qes1_13 {
 	
 	public static void main(String[] args) {
 		
-// 問題2
+// 問題3
 
 		// バイト型の変数を宣言
-		byte baito = 20;
+		byte baito = 10;
 		// 短整数型の変数を宣言
-		short tan = 300;
+		short tan = 100;
 		// 整数型の変数を宣言
-		int i = 4000;
+		int i = 1000;
 		// 長整数型の変数を宣言
-		long tyou = 50000;
+		long tyou = 10000;
 
 		// 単精度浮動小数点数型の変数を宣言
-		float f = 0.5f;
+		float f = 9.5f;
 		// 倍精度浮動小数点数型の変数を宣言
-		double d = 11.5;
+		double d = 10.5;
 
 		// 文字型の変数を宣言
-		char moji = 'あ';
+		char moji = 'a';
 		// 文字列型の変数を宣言
-		String retu = "ソーリー";
+		String retu = "ハロー";
 
 		// ブーリアン型の変数を宣言
-		boolean buu = false;
+		boolean buu = true;
 
 	}
 
