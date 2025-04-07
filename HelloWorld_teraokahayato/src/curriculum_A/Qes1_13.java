@@ -1,6 +1,7 @@
 package curriculum_A;
 
-
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class Qes1_13 {
 
@@ -63,7 +64,7 @@ public class Qes1_13 {
 		moji = '\u0000';
 
 		// 文字列型の変数を初期化
-		retu = "null";
+		retu = null;
 
 		// ブーリアン型の変数を初期化
 		buu = false;
@@ -162,9 +163,127 @@ public class Qes1_13 {
 		// 改行
 		System.out.println("");
 				
+		
+		//問題7
+		
+		// BMIの計算式をresultに代入
+		double result = weight / (height * height) * 10000;
+		
+		/* BigDecimalクラスで小数点以下の計算
+		 * RoundingMode.HALF_UPで四捨五入をして
+		 * コンソールに出力
+		 */
+		BigDecimal bmi = new BigDecimal(result);
+		bmi = bmi.setScale(1, RoundingMode.HALF_UP);
+		System.out.println("「BMIは" + bmi + "です」");
+		
+		// 改行
+		System.out.println("");
+		
+		
+		// 問題8
+		
+		// 変数を再代入
+		name = "鈴木一郎";
+		age = 24;
+		height = 168.5;
+		weight = 64.2;
+		food = "オムライス";
+		
+		// 再代入した変数でコンソールに出力
+		System.out.println("「初めまして" + name + "です」");
+		
+		System.out.println("「年齢は" + age + "歳です」");
+		
+		System.out.println("「身長は" + height + "cmです」");
+		
+		System.out.println("「体重は" + weight + "kgです」");
+		
+		System.out.println("「好きな食べ物は" + food + "です」");
+		
+		double result1 = weight / (height * height) * 10000;
+		BigDecimal bmi1 = new BigDecimal(result1);
+		bmi1 = bmi1.setScale(1, RoundingMode.HALF_UP);
+		System.out.println("「BMIは" + bmi1 + "です」");
+		
+		
+		// 改行
+		System.out.println("");
+		
+		
+		// 問題9
+		
+		// 変数を*2で自己代入
+		int a2 = age * 2;
+		double h2 = height * 2;
+		double w2 = weight * 2;
+		
+		
+		// 自己代入した変数をコンソールに出力
+		System.out.println("「初めまして" + name + "です」");
+		
+		System.out.println("「年齢は" + a2 + "歳です」");
+		
+		System.out.println("「身長は" + h2 + "cmです」");
+		
+		System.out.println("「体重は" + w2 + "kgです」");
+		
+		System.out.println("「好きな食べ物は" + food + "です」");
+		
+		double result2 = w2 / (h2 * h2) * 10000;
+		BigDecimal bmi2 = new BigDecimal(result2);
+		bmi2 = bmi2.setScale(2, RoundingMode.HALF_UP);
+		System.out.println("「BMIは" + bmi2 + "です」");
+		
+		// 改行
+		System.out.println("");
+		
+		
+		// 問題10
+		
+		// 25歳以上ならtrueを表示
+		System.out.println(age >= 25);
+		
+		// 改行
+		System.out.println("");
+		
+		
+		// 問題11
+		
+		// 数値を文字列へ変換
+		String a3 = String.valueOf(age);
+		String h3 = String.valueOf(height);
+		String w3 = String.valueOf(weight);
+		
+		// 変換した文字列を結合
+		String str1 = a3.concat(h3).concat(w3);
+		
+		// 結合した文字列をコンソールに出力
+		System.out.println(str1);
+		
+		// 改行
+		System.out.println("");
+		
+		
+		// 問題12
+		
+		// 文字列型の年齢と身長を整数型に変換してコンソールに出力
+		int a4 = Integer.valueOf(a3);
+		double h4 = Double.valueOf(h3);
+		
+		System.out.println(a4);
+		System.out.println(h4);
 
+		// 改行
+		System.out.println("");
+		
+		
+		// 問題13
+		
+		// 年齢が25もしくは身長が160以上ならtrueをコンソールに出力
+		System.out.println(a4 >= 25 || h4 >= 160);
+		
 	}
-
 }
 
 
