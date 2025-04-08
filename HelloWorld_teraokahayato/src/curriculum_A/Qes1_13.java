@@ -214,23 +214,23 @@ public class Qes1_13 {
 		// 問題9
 		
 		// 変数を*2で自己代入
-		int a2 = age * 2;
-		double h2 = height * 2;
-		double w2 = weight * 2;
+		age *= 2;
+		height *= 2;
+		weight *= 2;
 		
 		
 		// 自己代入した変数をコンソールに出力
 		System.out.println("「初めまして" + name + "です」");
 		
-		System.out.println("「年齢は" + a2 + "歳です」");
+		System.out.println("「年齢は" + age + "歳です」");
 		
-		System.out.println("「身長は" + h2 + "cmです」");
+		System.out.println("「身長は" + height + "cmです」");
 		
-		System.out.println("「体重は" + w2 + "kgです」");
+		System.out.println("「体重は" + weight + "kgです」");
 		
 		System.out.println("「好きな食べ物は" + food + "です」");
 		
-		double result2 = w2 / (h2 * h2) * 10000;
+		double result2 = weight / (height * height) * 10000;
 		BigDecimal bmi2 = new BigDecimal(result2);
 		bmi2 = bmi2.setScale(2, RoundingMode.HALF_UP);
 		System.out.println("「BMIは" + bmi2 + "です」");
@@ -241,6 +241,9 @@ public class Qes1_13 {
 		
 		// 問題10
 		
+		// 年齢を24歳に再代入
+		age = 24;
+		
 		// 25歳以上ならtrueを表示
 		System.out.println(age >= 25);
 		
@@ -250,11 +253,15 @@ public class Qes1_13 {
 		
 		// 問題11
 		
+		// 身長と体重の数値を再代入
+		height = 168.5;
+		weight = 64.2;
+		
 		// 数値を文字列へ変換
 		String a3 = String.valueOf(age);
 		String h3 = String.valueOf(height);
 		String w3 = String.valueOf(weight);
-		
+				
 		// 変換した文字列を結合
 		String str1 = a3.concat(h3).concat(w3);
 		
