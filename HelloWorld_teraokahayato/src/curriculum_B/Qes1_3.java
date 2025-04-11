@@ -62,43 +62,54 @@ public class Qes1_3 {
 			System.out.println(name + "の手は" + handToString(name1));
 			System.out.println("相手の手は"  + handToString(name2));
 
-				if (judge(name1, name2) == 1) {
-					System.out.println("やるやん。");
-					System.out.println("次は俺にリベンジさせて");
-					user1Wins = true;
-					
-				} else if (judge(name1, name2) == -1) {
-					System.out.println("ユーザー2の勝ち！");
-					
-				} else {
-					System.out.println("DRAW あいこ もう一回しましょう！");
-				}
+			if ((name1 == 0 && name2 == 1) || (name1 == 1 && name2 == 2) || (name1 == 1) && (name2 == 0)) {
+				System.out.println("やるやん。");
+				System.out.println("次は俺にリベンジさせて");
+				user1Wins = true;
 
-				System.out.println(name + "勝つまでにかかった合計回数は" + count + "回です");
+			} else if ((name1 == 0) && (name2 == 2)) {
+				System.out.println("俺の勝ち！\n"
+						+ "負けは次につながるチャンスです！\n"
+						+ "ネバーギブアップ！");
 
+			} else if ((name1 == 1) && (name2 == 0)) {
+				System.out.println("俺の勝ち！\n"
+						+ "たかがじゃんけん、そう思ってないですか？\n"
+						+ "それやったら次も、俺が勝ちますよ");
+
+			} else if ((name1 == 2) && (name2 == 1)) {
+				System.out.println("俺の勝ち！\n"
+						+ "なんで負けたか、明日まで考えといてください。\n"
+						+ "そしたら何かが見えてくるはずです");
+			} else {
+				System.out.println("DRAW あいこ もう一回しましょう！");
 			}
+			System.out.println(name + "勝つまでにかかった合計回数は" + count + "回です");
 		}
+	}
+
+
 
 
 	public static int judge(int name1, int name2) {
 		if (name1 == name2) {
 			return 0;
-			
+
 		} else if ((name1 == 0 && name2 == 1) || 
 				(name1 == 1 && name2 == 2) || 
 				(name1 == 2 && name2 == 0)) {
 			return 1;
-			
+
 		} else {
 			return -1;
-			
+
 		}
 	}
 
 
 	public static String handToString(int hand) {
 		switch (hand) {
-		
+
 		case 0: return "グー";
 		case 1: return "チョキ";
 		case 2: return "パー";
