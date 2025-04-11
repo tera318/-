@@ -84,8 +84,9 @@ public class Qes1_3 {
 			} else {
 				System.out.println("DRAW あいこ もう一回しましょう！");
 			}
-			System.out.println(name + "勝つまでにかかった合計回数は" + count + "回です");
+			
 		}
+		System.out.println(name + "勝つまでにかかった合計回数は" + count + "回です");
 	}
 
 
