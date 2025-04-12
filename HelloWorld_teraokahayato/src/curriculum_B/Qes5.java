@@ -12,7 +12,7 @@ public class Qes5 {
 
 				System.out.print(String.format(" %03d * %03d = %03d", j, i, j * i));
 
-				if (i != 10) System.out.print(" || ");
+				if (j != 20) System.out.print(" || ");
 			}
 			System.out.println();
 		}
