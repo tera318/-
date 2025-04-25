@@ -5,21 +5,15 @@ import java.util.Random;
 public class Curriculum_New_1_18{
 	// Q1：引数に文字列型と整数型をいれてコンソールに「Hello JavaSE 11」と出力するメソッドを作成してください。
 	
-	public static void moji() {
-		String h = "Hello JavaSE ";
-		System.out.print(h);
-	}
-	
-	public static void kazu() {
-		int s = 11;	
-		System.out.print("\n" + s);
+	public static void moji(String h,int s) {
+		System.out.print("\n" + h + s);
 	}
 	
 	
 	// Q2：引数に整数を渡すと渡した値同士を乗算しコンソールに出力するメソッドを作成してください
 	
 	public static void tasu(int x, int y) {
-		int a = x + y;
+		int a = x * y;
 		System.out.println("\n" + a);
 	}
 	
@@ -92,8 +86,7 @@ public class Curriculum_New_1_18{
 
 	public static void main(String[] args) {
     // 作成したメソッドをここで呼び出してください
-		moji();
-		kazu();
+		moji("Hello JavaSE ",11);
 		
 		tasu(3,5);
 		
