@@ -12,13 +12,11 @@ public class Dog {
 	
 	public Dog(String name){
 		this.name = name;
-		System.out.println(name);
 	}
-	
+		
 	// Q4：Q2で作成した変数に引数を代入するコンストラクタを作成してください。
 	
 	public Dog(int kazu) {
 		this.kazu = kazu;
-		System.out.println(kazu);
 	}
 }
