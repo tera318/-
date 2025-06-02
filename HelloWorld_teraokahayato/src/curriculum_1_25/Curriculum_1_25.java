@@ -23,7 +23,5 @@ public class Curriculum_1_25 {
 		c2.setRandom5(random.nextInt(1000));
 		
 		c2.Curriculum_1_25_3();
-	
 		}
-
 }

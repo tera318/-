@@ -21,6 +21,7 @@ public class Qes6 {
 
 			switch(text) {
 			case "パソコン":
+				
 				System.out.println("パソコンの残り台数は" + ran + "です\n");
 				break;
 			case "冷蔵庫":

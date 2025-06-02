@@ -1,50 +1,35 @@
 package menseki1;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Menseki1 {
-	
-	public Menseki1() {
-	
-	Map<Integer,String> map = new HashMap<>();
-	map.put(0,"北海道:札幌市:83424");
-	map.put(1, "青森県:青森市:9646");
-	map.put(2, "岩手県:盛岡市:15275");
-	map.put(3, "宮城県:仙台市:7282");
-	map.put(4, "秋田県:秋田市:11638");
-	map.put(5, "山形県:山形市:9323");
-	map.put(6, "福島県:福島市:13784");
-	map.put(7, "茨城県:水戸市:6097");
-	map.put(8, "栃木県:宇都宮市:6408");
-	map.put(9, "群馬県:前橋市:6362");
-	map.put(10, "埼玉県:さいたま市:3798");
-		
-	for (String val : map.values()) {
-		String[] mapdata = val.split(":");
-		if (mapdata.length != 11);
-		System.out.println(Arrays.toString(mapdata));
-		continue;
-		}
-	}
-		
-	
-	public void Number(String no) {
-		
-		System.out.println(no);
-		
-//		
-//		for (String Data : Map) {
-//			String[] data = Data.split(",");
-//			if (data.length != 3) {
-//				
-//			String T = data[0];
-//			String S = data[1];
-//			String M = data[2];
-//				
-			}
-		
-	}
 
-	
+    private Map<Integer, String[]> dataMap = new HashMap<>();
+
+    public Menseki1() {
+        dataMap.put(0, new String[]{"北海道", "札幌市", "83424"});
+        dataMap.put(1, new String[]{"青森県", "青森市", "9646"});
+        dataMap.put(2, new String[]{"岩手県", "盛岡市", "15275"});
+        dataMap.put(3, new String[]{"宮城県", "仙台市", "7282"});
+        dataMap.put(4, new String[]{"秋田県", "秋田市", "11638"});
+        dataMap.put(5, new String[]{"山形県", "山形市", "9323"});
+        dataMap.put(6, new String[]{"福島県", "福島市", "13784"});
+        dataMap.put(7, new String[]{"茨城県", "水戸市", "6097"});
+        dataMap.put(8, new String[]{"栃木県", "宇都宮市", "6408"});
+        dataMap.put(9, new String[]{"群馬県", "前橋市", "6362"});
+        dataMap.put(10, new String[]{"埼玉県", "さいたま市", "3798"});
+    }
+
+    public void printData(int no) {
+        if (dataMap.containsKey(no)) {
+            String[] info = dataMap.get(no);
+            System.out.println("都道府県名：" + info[0]);
+            System.out.println("県庁所在地：" + info[1]);
+            System.out.println("面積：" + Double.parseDouble(info[2]) + "km2");
+            System.out.println();
+        } else {
+            System.out.println("番号 " + no + " に該当するデータがありません。");
+        }
+    }
+}

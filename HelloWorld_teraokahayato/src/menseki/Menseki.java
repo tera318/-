@@ -1,5 +1,8 @@
 package menseki;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 import menseki1.Menseki1;
@@ -8,22 +11,44 @@ public class Menseki {
 
 	public static void main(String[] args) {
 		
-		Menseki1 Men1 = new Menseki1();
 		Scanner scanner = new Scanner(System.in);
 		String intext = scanner.nextLine();
+		
+		boolean narabi = true;
+		
+		if (intext.contains("(降順)")) {
+			narabi = false;
+			intext = intext.replace("(降順)","");
+			} else if (intext.contains("昇順")) {
+				narabi = true;
+				intext = intext.replace("(昇順)","");
+			}
+		
+		
 		String No[] = intext.split(",");
 		
-		
-		for (int i = 0; i > No.length; i++) {
-			String no = No[i];
-			Men1.Number(no);
+		List<Integer> numbers = new ArrayList<>();
+		for (String n : No) {		
+			numbers.add(Integer.parseInt(n.trim()));
 		}
 		
-//		
-//		System.out.println("都道府県名：" + T);
-//		System.out.println("県庁所在地：" + S);
-//		System.out.println("面積：" + M + "km2");
 		
+		if (narabi) {
+			Collections.sort(numbers);
+		} else {
+			Collections.sort(numbers, Collections.reverseOrder());
+			
+		}
+		
+		Menseki1 Men1 = new Menseki1();
+		
+		for (int no : numbers) {
+			Men1.printData(no);
+	
+		}
+		
+		scanner.close();
+	
 	}
 
 }
